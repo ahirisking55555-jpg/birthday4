@@ -840,7 +840,12 @@
                     delay: 3 + text.length * 0.1 + 0.3,
                     duration: 1.5
                 });
-                
+                // Romantic message ke liye bhi same effect
+gsap.fromTo(".romantic-message", 
+  { opacity: 0, scale: 0.8 }, 
+  { opacity: 1, scale: 1, duration: 1.5, ease: "back.out(1.7)", delay: 1.5 }
+);
+
                 // Animate button appearance
                 const celebrateBtn = document.getElementById('celebrateBtn');
                 gsap.to(celebrateBtn, {
@@ -930,6 +935,7 @@
 </body>
 
 </html>
+
 
 
 
