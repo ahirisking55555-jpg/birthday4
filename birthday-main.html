@@ -84,6 +84,8 @@
   color: #ffb6c1;
   text-align: center;
   width: 80%; 
+          opacity: 0;        
+  transform: scale(0.8);
          
 }
             
@@ -841,10 +843,14 @@
                     duration: 1.5
                 });
                 // Romantic message ke liye bhi same effect
-gsap.fromTo(".romantic-message", 
-  { opacity: 0, scale: 0.8 }, 
-  { opacity: 1, scale: 1, duration: 1.5, ease: "back.out(1.7)", delay: 1.5 }
-);
+gsap.to(".romantic-message", {
+  opacity: 1,
+  scale: 1,
+  duration: 1.5,
+  ease: "back.out(1.7)",
+  delay: 1.5   // Happy Birthday ke baad aayega
+});
+
 
                 // Animate button appearance
                 const celebrateBtn = document.getElementById('celebrateBtn');
@@ -935,6 +941,7 @@ gsap.fromTo(".romantic-message",
 </body>
 
 </html>
+
 
 
 
