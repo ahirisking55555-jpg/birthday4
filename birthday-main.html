@@ -76,16 +76,16 @@
 
        
      .romantic-message {
-       font-size: 20px;
+      font-size: 20px;
   color: #ffb6c1;
   position: absolute;
-  top: 65%;        
+  top: calc(50% + 120px); /* 👈 Birthday text ke niche aayega (100px + extra margin) */
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%) scale(0.8); /* 👈 combine translateX + scale in one line */
   text-align: center;
-  width: 80%; 
-         opacity: 0;        /* 👈 page load pe hidden */
-  transform: scale(0.8);
+  width: 80%;
+  opacity: 0;
+ 
          
 }
             
@@ -941,6 +941,7 @@ gsap.to(".romantic-message", {
 </body>
 
 </html>
+
 
 
 
